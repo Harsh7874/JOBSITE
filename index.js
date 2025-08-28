@@ -29,6 +29,9 @@ app.use(cors())
 
 app.use("/auth", userRouter)
 app.use("/auth/job", jobRouter)
+app.use((req, res) => {
+  res.status(404).send("The path is not valid");
+});
 
 app.get("/", (req, res) => {
     res.send("API Working")
