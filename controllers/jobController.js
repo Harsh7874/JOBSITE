@@ -1,6 +1,6 @@
 import jobModel from "../models/JobModel.js"
 
-const jobList = async (res) => {
+const jobList = async (req, res) => {
     try {
 
         const jobs = await jobModel.find({})
