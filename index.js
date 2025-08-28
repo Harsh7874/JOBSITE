@@ -30,7 +30,7 @@ app.use(cors())
 app.use("/auth", userRouter)
 app.use("/auth/job", jobRouter)
 
-app.get("/", (res) => {
+app.get("/", (req, res) => {
     res.send("API Working")
   });
   
